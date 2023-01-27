@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="sum"></p>
+    <script>
+      const number = [45, 4, 9, 16, 25];
+      const sum = number.reduce(function (accumlator, value, index, Array) {
+        return accumlator + value;
+      }, 0);
+      console.log("sum of array element is ::", sum);
+
+      //const sum =number.reduce (genratesum,0);
+      //console.log ("sum of array elements is ::", sum);
+      //function genrationsum (accumlator, value , index ,array);{
+      //return accumlator +value;
+      // }
+      document.getElementById("demo").innerHTML =
+        "given array :" + number.join(",");
+      document.getElementById("sum").innerHTML =
+        "the sum of above array is ::" + sum;
+    </script>
+  </body>
+</html>
